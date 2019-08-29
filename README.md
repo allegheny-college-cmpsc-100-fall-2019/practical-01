@@ -145,7 +145,8 @@ The "Hello, World" is a well-worn computer science tradition. Often, when learni
 
 * This should download and run the "Hello, World" container, returning output looking similar to the following:
 
-```docker run hello-world
+```
+docker run hello-world
 docker : Unable to find image 'hello-world:latest' locally
 ...
 latest:
@@ -160,7 +161,7 @@ Digest: sha256:97ce6fa4b6cdc0790cda65fe7290b74cfebd9fa0c9b8c38e979330d547d22ce1
 Status: Downloaded newer image for hello-world:latest
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
-...```
+```
 
 ### Atom
 
