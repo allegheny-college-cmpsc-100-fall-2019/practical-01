@@ -101,5 +101,5 @@ Docker is what is referred to as a "containerization" platform. Essentially, it 
     * **Unix**: Depending on your version, use `apt` or `yum` (or other package manager)
     * **Older versions of Windows and Mac** (Windows 10 Home or Mac OS X 10.11 or earlier):
         * For reasons which we can discuss as the need arises, older versions of Windows and Mac OS need to use other software known as "Docker Toolbox"
-        * Follow the instructions to install [Docker Toolbox[(https://docs.docker.com/toolbox/toolbox_install_windows](https://docs.docker.com/toolbox/toolbox_install_windows) to download.
-        * **Note**: During installation, the installer screen may feature an option to install Oracle VirtualBox. Be sure to place a check mark by this option or click "Yes" at hte resulting prompts which ask to run Oracle VirtualBox.
+        * Follow the instructions to install [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows](https://docs.docker.com/toolbox/toolbox_install_windows) to download.
+        * **Note**: During installation, the installer screen may feature an option to install Oracle VirtualBox. Be sure to place a check mark by this option or click "Yes" at the resulting prompts which ask to run Oracle VirtualBox.
