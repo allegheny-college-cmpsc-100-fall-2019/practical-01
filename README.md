@@ -5,6 +5,7 @@ In this practical session, we focus on setting up various tools and platforms th
 * [GitHub](https://www.github.com)
 * [Docker](https://www.docker.com)
 * [Slack](https://www.slack.com)
+* [Atom](https://atom.io)
 
 ## General guidelines for practical sessions
 
@@ -14,8 +15,19 @@ In this practical session, we focus on setting up various tools and platforms th
 * **Try to finish during the class session** While I provide extra time to complete the work, these assignments can be completed in 50 minutes. This will help you develop your awareness and management of time.
 * **Help one another!** We're a community of users here; not students in competition for grades. If you grasp something quickly, but a neighbor does not, offer to help them after they've tried for a bit. Conversely, _ask for help_ from either me, our lab TLs, or your neighbor.
 
+## Table of Contents
+
+* [Slack](#slack)
+* [GitHub](#github)
+* [Securing your GitHub account (SSH)](#securing-your-github-account)
+* [Docker](#docker)
+* [Running your first container](#running-your-first-container)
+* [Atom](#atom)
+
 ## Your assignment
+
 Broadly, this practical session's goals are:
+* To download and install Atom, a common text editor for software development
 * To set up secure communication between your PC and the GitHub platform using a git client
 * To prepare your PC for future assignments arriving from [GitHub Classroom](https://classroom.github.com)
 * To install the "containerization" platform, Docker
@@ -25,7 +37,8 @@ Broadly, this practical session's goals are:
 
 A communications platform curing the headache of email.
 
-- [ ] Accept my invitation to [Slack](https://www.slack.com).
+- [ ] If you have not already, accept my invitation to [Slack](https://www.slack.com).
+
 - [ ] Log in to our [Slack workspace](https://cmpsc100fall2019.slack.com)
 - [ ] Navigate to the #practicals channel.
 * If you did not receive an invitation, let me know and I can send it again.
@@ -33,7 +46,7 @@ A communications platform curing the headache of email.
 
 ### GitHub
 
-A kind of social network for code and developers (aka the community of nerds of which you are now a de facto member).
+A kind of social network for code and developers to share and comment on code projects.
 
 #### If you do not already have a GitHub account
 
@@ -46,38 +59,47 @@ A kind of social network for code and developers (aka the community of nerds of 
 #### If you have a GitHub account
 
 - [ ] Log in to GitHub.
-- [ ] In our Slack #practicals channel, type one **one** line:
+- [ ] In our Slack #practicals channel, type the following on **one** line:
 * Your name
 * Your Allegheny email address
 * Your GitHub username
+
+* If you have a bit of time, consider:
+    * Adding a professional profile picture to your account
+    * Downloading [GitHub's "Student Developer Pack"](https://education.github.pack)
 
 * **Note**: Keep your GitHub browser window open; we will use it later
 
 ### git
 
-Whereas GitHub is the social network, git is the "share button" that allows you to make your code available so that we can all nerd out about code. It's fun, I promise.
+Whereas GitHub is a kind of social network, git is the "share button" that allows you to make your code available.
 
 - [ ] Visit the [git](https://git-scm.com/downloads) to download the version of git for your operating system (O.S.).
 
 ### Securing your GitHub account
 
-The professional world uses a standard object known as an SSH key to prove a given user's identity and encrypt communications for only those cool enough to read them (AKA have keys which allow them to log in to a server). This is your magic decoder ring.
+The professional world uses a standard object known as an SSH key to prove a given user's identity and encrypt communications.
+
+#### Opening a terminal window
 
 - [ ] Open a "terminal" window.
 * Depending on your operating system there are several ways to do this:
    * **Windows**
-       * Click Start > Run (or press `CTRL` + `R`) to print up the "Run" window.
-       * Type `cmd`
+       * Press `CTRL` + `R`
+       * Type `cmd` in the window that results.
    * **Mac**
        * Press `CTRL` + `OPTION` + `SHIFT` + `T`
    * **Unix**
        * Generally, `CTRL` + `ALT` + `T` does the trick
+
+#### Generating a key
+
 - [ ] In the resulting terminal window based on the steps above, type `ssh-keygen` and press `Enter`
 - [ ] At the prompt `Enter file in which to save the key`, press `Enter` to accept the default location (indicated in the parenthesis in the line)
 - [ ] At the next prompt, enter a password used to secure the key
 * You will use this passphrase to identify yourself as an owner or user of the key
 - [ ] Once the keygen has finished, located the `id_rsa.pub` file where the process saved the key
-* This is your unique key; it will be unintelligible to you, but computers read this stuff for fun
+* This is your unique key; it will be unintelligible to you, but it is your unique identifier. Keep all of the files this program generates.
 - [ ] Open the `id_rsa.pub` file in a text editor (Notepad, et al.)
 - [ ] Copy only the portion the letters and numbers of the key
 - [ ] In the browser window containing GitHub, click the uppermost-right icon to access your account menu
@@ -90,9 +112,7 @@ The professional world uses a standard object known as an SSH key to prove a giv
 
 ### Docker
 
-Docker is what is referred to as a "containerization" platform. Essentially, it is software (like the programming language we'll use in the course, Java), which ensures that programs run the same way _everywhere_. Our Docker "images" will contain a single, standard Unix (Ubuntu) operating system. This minimizes technical issues and allows developers to concentrate on their code, rather than system specs.
-
-* When you get to this step in the practical, get the attention of either the professor or class TLs before proceeding.
+Docker is what is referred to as a "containerization" platform. Essentially, it is software  which ensures that programs run the same way _everywhere_. Docker is developed with the same goal as that of the Java language we'll learn in this course--that software should work the same regardless of where it's run. Our Docker "images" will contain a single, standard Unix (Ubuntu) operating system. This minimizes technical issues and allows developers to concentrate on their code, rather than system specs.
 
 - [ ] Download and install Docker.
 * Depending on your operating system's version, you may need a specific platform. Consult your OS when considering the following options:
@@ -103,3 +123,45 @@ Docker is what is referred to as a "containerization" platform. Essentially, it 
         * For reasons which we can discuss as the need arises, older versions of Windows and Mac OS need to use other software known as "Docker Toolbox"
         * Follow the instructions to install [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows](https://docs.docker.com/toolbox/toolbox_install_windows) to download.
         * **Note**: During installation, the installer screen may feature an option to install Oracle VirtualBox. Be sure to place a check mark by this option or click "Yes" at the resulting prompts which ask to run Oracle VirtualBox.
+        
+#### If you installed "Docker Desktop"
+- [ ] Once you've loaded Docker open a terminal window (refer to the [section above](#securing-your-github-account) for terminal instructions).
+- [ ] In the terminal window, type `docker --version`.
+    * The terminal should display a line similar to `Docker version 19.03.1, build 74b1e89`
+    * If not, let either the professor or a TL know.
+
+#### If you installed "Docker Toolbox"
+- [ ] Locate the "Docker Quickstart Terminal" and open it.
+    * This should open a terminal window. If it doesn't let either the professor or a TL know.
+- [ ] In the terminal window type `docker --version`
+    * You should receive a line similar to `Docker version 19.03.1, build 74b1e89`.
+    * If not, let either the professor or a TL know.
+    
+### Running your first container
+
+The "Hello, World" is a well-worn computer science tradition. Often, when learning a new language or technology, the first example that a user makes is called a "Hello, World."
+
+- [ ] In a terminal window, type `docker run hello-world`.
+
+* This should download and run the "Hello, World" container, returning output looking similar to the following:
+
+```docker run hello-world
+docker : Unable to find image 'hello-world:latest' locally
+...
+latest:
+Pulling from library/hello-world
+ca4f61b1923c:
+Pulling fs layer
+ca4f61b1923c:
+Download complete
+ca4f61b1923c:
+Pull complete
+Digest: sha256:97ce6fa4b6cdc0790cda65fe7290b74cfebd9fa0c9b8c38e979330d547d22ce1
+Status: Downloaded newer image for hello-world:latest
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+...```
+
+### Atom
+
+- [ ] Visit [https://atom.io](atom.io) to download the installer for your operating system.
