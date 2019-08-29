@@ -96,7 +96,7 @@ Docker is what is referred to as a "containerization" platform. Essentially, it 
 
 - [ ] Download and install Docker.
 * Depending on your operating system's version, you may need a specific platform. Consult your OS when considering the following options:
-    * **Windows 10**: [https://download.docker.com/win/stable/Docker for Windows Installer.exe(https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
+    * **Windows 10**: [https://download.docker.com/win/stable/Docker for Windows Installer.exe](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
     * **Mac**: [https://download.docker.com/mac/stable/docker.dmg](https://download.docker.com/mac/stable/docker.dmg)
     * **Unix**: Depending on your version, use `apt` or `yum` (or other package manager)
     * **Older versions of Windows and Mac** (Windows 10 Home or Mac OS X 10.11 or earlier):
