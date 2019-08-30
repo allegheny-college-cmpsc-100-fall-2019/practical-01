@@ -94,7 +94,7 @@ The professional world uses a standard object known as an SSH key to prove a giv
 
 #### Generating a key
 
-- [ ] In the resulting terminal window based on the steps above, type `\ssh-keygen -t rsa -b 4096 -C "YOUR ALLEGHENY EMAIL"` and press `Enter`
+- [ ] In the resulting terminal window based on the steps above, type `ssh-keygen -t rsa -b 4096 -C "YOUR ALLEGHENY EMAIL"` and press `Enter`
 - [ ] At the prompt `Enter file in which to save the key`, press `Enter` to accept the default location (indicated in the parenthesis in the line)
 - [ ] At the next prompt, enter a password used to secure the key
 * You will use this passphrase to identify yourself as an owner or user of the key
@@ -144,7 +144,7 @@ The "Hello, World" is a well-worn computer science tradition. Often, when learni
 
 - [ ] In a terminal window, type `docker run hello-world`.
 
-* This should download and run the "Hello, World" container, returning output looking similar to the following:
+* This command will download and run the "Hello, World" container, returning output looking similar to the following:
 
 ```
 docker run hello-world
