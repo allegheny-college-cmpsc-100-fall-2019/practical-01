@@ -1,6 +1,6 @@
 # CMPSC 100-03 Practical Session 1
 
-In this practical session, we focus on setting up various tools and platforms that are mission-critical to our work. Initially these include:
+In this practical session, we focus on setting up various tools and platforms that are mission-critical to our work. Initially, these include:
 * [Slack](https://www.slack.com)
 * [GitHub](https://www.github.com)
 * Chocolatey (**Windows only**)
@@ -177,7 +177,9 @@ Docker is what is referred to as a "containerization" platform. Essentially, it 
     
 ### Running your first container
 
-The "Hello, World" is a well-established computer science tradition. Often, when learning a new language or technology, the first example that a user makes is called a "Hello, World."
+A "container," though a techical term here, is pretty much what it sounds like: a sealed package that, while "renting" space on your hard drive, acts as an isolated set of software, usually containing an operating system and other specialized applications necessary for a specific task. Typically, these operating systems and software combinations are _as spare as possible_, meaning that (to conserve "weight" or "footprint") they only incorporate exactly what they need to run and nothing more.
+
+The "Hello, World" is a well-established computer science tradition. Often, when learning a new language or technology, the first example that a user makes is called a "Hello, World." This Docker container contains only enough to run this example, the output of which is highlighted below.
 
 - [ ] In a terminal window, type `docker run hello-world`.
 
