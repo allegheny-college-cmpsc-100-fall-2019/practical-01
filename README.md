@@ -74,6 +74,8 @@ A kind of social network for code and developers to share and comment on code pr
 
 ### Chocolatey (Windows only)
 
+* If you aren't a Windows user, you can skip to [git](#git)
+
 Chocolately adds Unix-like commands to the Windows command prompt. Many of these commands are helpful for making your work more efficient and easier.
 
 - [ ] Open a Command Prompt window with administrative privileges
