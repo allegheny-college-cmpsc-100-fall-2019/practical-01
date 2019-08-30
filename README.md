@@ -20,7 +20,7 @@ In this practical session, we focus on setting up various tools and platforms th
 
 * [Slack](#slack)
 * [GitHub](#github)
-* [Chocolatey](#chocolatey-windows-only
+* [Chocolatey](#chocolatey-windows-only)
 * [Securing your GitHub account (SSH)](#securing-your-github-account)
 * [Docker](#docker)
 * [Running your first container](#running-your-first-container)
@@ -150,10 +150,11 @@ The professional world uses a standard object known as an SSH key to prove a giv
 
 Docker is what is referred to as a "containerization" platform. Essentially, it is software  which ensures that programs run the same way _everywhere_. Docker is developed with the same goal as that of the Java language we'll learn in this course--that software should work the same regardless of where it's run. Our Docker "images" will contain a single, standard Unix (Ubuntu) operating system. This minimizes technical issues and allows developers to concentrate on their code, rather than system specs. Instead of downloading dozens of tools to build and execute software, containers allow us to run one file containing all of the utilities necessary.
 
+
 - [ ] Download and install Docker.
 * Depending on your operating system's version, you may need a specific platform. Consult your OS when considering the following options:
-    * **Windows 10**: [https://download.docker.com/win/stable/Docker for Windows Installer.exe](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
-    * **Mac**: [https://download.docker.com/mac/stable/docker.dmg](https://download.docker.com/mac/stable/docker.dmg)
+    * **Windows 10 Pro or Enterprise**: [https://download.docker.com/win/stable/Docker for Windows Installer.exe](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
+    * **Mac OS X > 10.11**: [https://download.docker.com/mac/stable/docker.dmg](https://download.docker.com/mac/stable/docker.dmg)
     * **Unix**: Depending on your version, use `apt` or `yum` (or other package manager)
     * **Older versions of Windows and Mac** (Windows 10 Home or Mac OS X 10.11 or earlier):
         * For reasons which we can discuss as the need arises, older versions of Windows and Mac OS need to use other software known as "Docker Toolbox"
