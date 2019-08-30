@@ -20,7 +20,7 @@ In this practical session, we focus on setting up various tools and platforms th
 
 * [Slack](#slack)
 * [GitHub](#github)
-* [Chocolatey](#chocolatey-windows-only)
+* [Chocolatey](#chocolatey-windows-only) (**Windows only**)
 * [Securing your GitHub account (SSH)](#securing-your-github-account)
 * [Docker](#docker)
 * [Running your first container](#running-your-first-container)
