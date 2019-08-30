@@ -11,8 +11,8 @@ In this practical session, we focus on setting up various tools and platforms th
 ## General guidelines for practical sessions
 
 * **Experiment!** We design practical sessions to create a space for you to _try things_. Given the expertise of our classroom TLs and my interest in fixing stuff, I am sure that even if something breaks, we can fix it.
-* **Complete _something_** Grading for practical assignments hinges on _completion_. As long as you provide a good faith effort to finish a task, your grade should reflect your effort.
-* **Practice skills** If you work in the discipline of computer science, many of the skills you revisit or establish here are industry standard practice. Learning and practicing them often helps prepare you for either other classes or professional work.
+* **Complete _something_.** Grading for practical assignments hinges on _completion_. As long as you provide a good faith effort to finish a task, your grade should reflect your effort.
+* **Practice skills.** If you work in the discipline of computer science, many of the skills you revisit or establish here are industry standard practice. Learning and practicing them often helps prepare you for either other classes or professional work.
 * **Try to finish during the class session** While I provide extra time to complete the work, these assignments can be completed in 50 minutes. This will help you develop your awareness and management of time.
 * **Help one another!** We're a community of users here, not competitors. If you grasp something quickly, but a neighbor does not, offer to help them after they've tried for a bit. Conversely, _ask for help_ from either me, our lab TLs, or your neighbor.
 
@@ -42,9 +42,9 @@ A communications platform curing the headache of email.
 - [ ] If you have not already, accept my invitation to [Slack](https://www.slack.com).
 
 - [ ] Log in to our [Slack workspace](https://cmpsc100fall2019.slack.com)
-- [ ] Navigate to the #practicals channel.
+- [ ] Navigate to the `#practicals` channel.
 * If you did not receive an invitation, let me know and I can send it again.
-* **Note**: You can use the #practicals channel to discuss various elements of the assignment. In addition you can directly message me (@dluman) to chat directly about questions or issues that you have.
+* **Note**: You can use the `#practicals` channel to discuss various elements of the assignment. In addition you can directly message me (@dluman) to chat directly about questions or issues that you have.
 
 ### GitHub
 
@@ -61,7 +61,7 @@ A kind of social network for code and developers to share and comment on code pr
 #### If you have a GitHub account
 
 - [ ] Log in to GitHub.
-- [ ] In our Slack #practicals channel, type the following on **one** line:
+- [ ] In our Slack `#practicals` channel, type the following on **one** line:
 * Your name
 * Your Allegheny email address
 * Your GitHub username
