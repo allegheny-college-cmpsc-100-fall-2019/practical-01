@@ -3,6 +3,7 @@
 In this practical session, we focus on setting up various tools and platforms that are mission-critical to our work. Initially these include:
 * [Slack](https://www.slack.com)
 * [GitHub](https://www.github.com)
+* Chocolatey (**Windows only**)
 * [git](https://git-scm.com/downloads)
 * [Docker](https://www.docker.com)
 * [Atom](https://atom.io)
@@ -19,6 +20,7 @@ In this practical session, we focus on setting up various tools and platforms th
 
 * [Slack](#slack)
 * [GitHub](#github)
+* [Chocolatey](#chocolatey-windows-only
 * [Securing your GitHub account (SSH)](#securing-your-github-account)
 * [Docker](#docker)
 * [Running your first container](#running-your-first-container)
@@ -68,17 +70,27 @@ A kind of social network for code and developers to share and comment on code pr
     * Adding a professional profile picture to your account
     * Downloading [GitHub's "Student Developer Pack"](https://education.github.com/pack)
 
-* **Note**: Keep your GitHub browser window open; we will use it later
+* **Note**: Keep your GitHub browser window open; you will use it later
+
+### Chocolatey (Windows only)
+
+Chocolately adds Unix-like commands to the Windows command prompt. Many of these commands are helpful for making your work more efficient and easier.
+
+- [ ] Open a Command Prompt window with administrative privileges
+    * You may need to find and right click the `Command Prompt` entry in the start menu, and select `Run as Administrator`
+- [ ] Copy and paste the following command:
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+- [ ] To test this step, open a new Command Prompt window (`CTRL` + `R`, type `cmd` in the "Run" window) and hit `Enter`), and type:
+```
+choco --version
+```
+* You should see a line similar to `Chocolatey v0.10.15`. This indicates that the install was successful.
 
 ### git
 
-Whereas GitHub is a kind of social network, git is the "share button" that allows you to make your code available.
-
-- [ ] Visit the [git](https://git-scm.com/downloads) to download the version of git for your operating system (O.S.).
-
-### Securing your GitHub account
-
-The professional world uses a standard object known as an SSH key to prove a given user's identity and encrypt communications.
+Whereas GitHub is a kind of social network, git is the application that allows you to make your code available.
 
 #### Opening a terminal window
 
@@ -92,27 +104,51 @@ The professional world uses a standard object known as an SSH key to prove a giv
    * **Unix**
        * Generally, `CTRL` + `ALT` + `T` does the trick
 
+#### Windows
+
+- [ ] Copy and paste the following command:
+```
+choco install git -y --params "/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration"
+```
+- [ ] After this operation completes, type `git --version` in the terminal window.
+* If a line similar to `git version 2.23.0.windows.1` appears, the installation was successful.
+
+#### Mac
+
+- [ ] In a terminal, type `git --version`
+* If git is not yet installed, the installer will start.
+
+#### Unix
+
+- [ ] In a terminal window, type `sudo apt-get install git`
+* If git is not yet installed, the installer will start.
+
+### Securing your GitHub account
+
+The professional world uses a standard object known as an SSH key to prove a given user's identity and encrypt communications.
+
 #### Generating a key
 
 - [ ] In the resulting terminal window based on the steps above, type `ssh-keygen -t rsa -b 4096 -C "YOUR ALLEGHENY EMAIL"` and press `Enter`
-- [ ] At the prompt `Enter file in which to save the key`, press `Enter` to accept the default location (indicated in the parenthesis in the line)
+- [ ] At the prompt `Enter file in which to save the key`, press `Enter` to accept the default location
+* To what location did the function save the key? How do you know? Discuss with a neighbor, a TL, or the professor.
 - [ ] At the next prompt, enter a password used to secure the key
 * You will use this passphrase to identify yourself as an owner or user of the key
 - [ ] Once the keygen has finished, located the `id_rsa.pub` file where the process saved the key
 * This is your unique key; it will be unintelligible to you, but it is your unique identifier. Keep all of the files this program generates.
-- [ ] Open the `id_rsa.pub` file in a text editor (Notepad, et al.)
+- [ ] In the terminal window, type `cat ~/.ssh/id_rsa.pub`
 - [ ] Copy only the portion containing letters and numbers
 - [ ] In the browser window containing GitHub, click the uppermost-right icon to access your account menu
 - [ ] Locate and click the `Settings` entry
 - [ ] On the resulting screen, locate and click the option for `SSH and GPG keys`
 - [ ] Click `New SSH key`
-- [ ] Give the key a title such as `Allegheny`
+- [ ] Give the key a title such as `Allegheny CS`
 - [ ] Paste the long string of letters and numbers you copied above into the `Key` field
 - [ ] Click `Add SSH key` to add the key
 
 ### Docker
 
-Docker is what is referred to as a "containerization" platform. Essentially, it is software  which ensures that programs run the same way _everywhere_. Docker is developed with the same goal as that of the Java language we'll learn in this course--that software should work the same regardless of where it's run. Our Docker "images" will contain a single, standard Unix (Ubuntu) operating system. This minimizes technical issues and allows developers to concentrate on their code, rather than system specs.
+Docker is what is referred to as a "containerization" platform. Essentially, it is software  which ensures that programs run the same way _everywhere_. Docker is developed with the same goal as that of the Java language we'll learn in this course--that software should work the same regardless of where it's run. Our Docker "images" will contain a single, standard Unix (Ubuntu) operating system. This minimizes technical issues and allows developers to concentrate on their code, rather than system specs. Instead of downloading dozens of tools to build and execute software, containers allow us to run one file containing all of the utilities necessary.
 
 - [ ] Download and install Docker.
 * Depending on your operating system's version, you may need a specific platform. Consult your OS when considering the following options:
@@ -140,7 +176,7 @@ Docker is what is referred to as a "containerization" platform. Essentially, it 
     
 ### Running your first container
 
-The "Hello, World" is a well-worn computer science tradition. Often, when learning a new language or technology, the first example that a user makes is called a "Hello, World."
+The "Hello, World" is a well-established computer science tradition. Often, when learning a new language or technology, the first example that a user makes is called a "Hello, World."
 
 - [ ] In a terminal window, type `docker run hello-world`.
 
@@ -167,3 +203,11 @@ This message shows that your installation appears to be working correctly.
 ### Atom
 
 - [ ] Visit [https://atom.io](atom.io) to download the installer for your operating system.
+
+## Submitting this assignment
+
+To submit this assignment, navigate to the `#practicals` channel in our class Slack [https://cmpsc100fall2019.slack.com](https://cmpsc100fall2019.slack.com) and type:
+* The operating system of your machine
+* Which of the installs completed successfully.
+* Which of the installs did not complete (or you did not get to)
+* A short description of your experience completing this practical session.
