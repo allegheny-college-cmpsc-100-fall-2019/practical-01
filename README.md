@@ -183,7 +183,7 @@ A "container," though a techical term here, is pretty much what it sounds like: 
 
 The "Hello, World" is a well-established computer science tradition. Often, when learning a new language or technology, the first example that a user makes is called a "Hello, World." This Docker container contains only enough to run this example, the output of which is highlighted below.
 
-- [ ] In a terminal window, type `docker run hello-world`.
+- [ ] In a terminal (Docker Quick Start Terminal for `Docker Toolbox`) window, type `docker run hello-world`.
 
 * This command will download and run the "Hello, World" container, returning output looking similar to the following:
 
