@@ -1,10 +1,10 @@
 # CMPSC 100-03 Practical Session 1
 
 In this practical session, we focus on setting up various tools and platforms that are mission-critical to our work. Initially these include:
-* [git](https://git-scm.com/downloads)
-* [GitHub](https://www.github.com)
-* [Docker](https://www.docker.com)
 * [Slack](https://www.slack.com)
+* [GitHub](https://www.github.com)
+* [git](https://git-scm.com/downloads)
+* [Docker](https://www.docker.com)
 * [Atom](https://atom.io)
 
 ## General guidelines for practical sessions
@@ -13,7 +13,7 @@ In this practical session, we focus on setting up various tools and platforms th
 * **Complete _something_** Grading for practical assignments hinges on _completion_. As long as you provide a good faith effort to finish a task, your grade should reflect your effort.
 * **Practice skills** If you work in the discipline of computer science, many of the skills you revisit or establish here are industry standard practice. Learning and practicing them often helps prepare you for either other classes or professional work.
 * **Try to finish during the class session** While I provide extra time to complete the work, these assignments can be completed in 50 minutes. This will help you develop your awareness and management of time.
-* **Help one another!** We're a community of users here; not students in competition for grades. If you grasp something quickly, but a neighbor does not, offer to help them after they've tried for a bit. Conversely, _ask for help_ from either me, our lab TLs, or your neighbor.
+* **Help one another!** We're a community of users here, not competitors. If you grasp something quickly, but a neighbor does not, offer to help them after they've tried for a bit. Conversely, _ask for help_ from either me, our lab TLs, or your neighbor.
 
 ## Table of Contents
 
@@ -66,7 +66,7 @@ A kind of social network for code and developers to share and comment on code pr
 
 * If you have a bit of time, consider:
     * Adding a professional profile picture to your account
-    * Downloading [GitHub's "Student Developer Pack"](https://education.github.pack)
+    * Downloading [GitHub's "Student Developer Pack"](https://education.github.com/pack)
 
 * **Note**: Keep your GitHub browser window open; we will use it later
 
@@ -94,14 +94,14 @@ The professional world uses a standard object known as an SSH key to prove a giv
 
 #### Generating a key
 
-- [ ] In the resulting terminal window based on the steps above, type `ssh-keygen` and press `Enter`
+- [ ] In the resulting terminal window based on the steps above, type `\ssh-keygen -t rsa -b 4096 -C "YOUR ALLEGHENY EMAIL"` and press `Enter`
 - [ ] At the prompt `Enter file in which to save the key`, press `Enter` to accept the default location (indicated in the parenthesis in the line)
 - [ ] At the next prompt, enter a password used to secure the key
 * You will use this passphrase to identify yourself as an owner or user of the key
 - [ ] Once the keygen has finished, located the `id_rsa.pub` file where the process saved the key
 * This is your unique key; it will be unintelligible to you, but it is your unique identifier. Keep all of the files this program generates.
 - [ ] Open the `id_rsa.pub` file in a text editor (Notepad, et al.)
-- [ ] Copy only the portion the letters and numbers of the key
+- [ ] Copy only the portion containing letters and numbers
 - [ ] In the browser window containing GitHub, click the uppermost-right icon to access your account menu
 - [ ] Locate and click the `Settings` entry
 - [ ] On the resulting screen, locate and click the option for `SSH and GPG keys`
@@ -123,6 +123,7 @@ Docker is what is referred to as a "containerization" platform. Essentially, it 
         * For reasons which we can discuss as the need arises, older versions of Windows and Mac OS need to use other software known as "Docker Toolbox"
         * Follow the instructions to install [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows](https://docs.docker.com/toolbox/toolbox_install_windows) to download.
         * **Note**: During installation, the installer screen may feature an option to install Oracle VirtualBox. Be sure to place a check mark by this option or click "Yes" at the resulting prompts which ask to run Oracle VirtualBox.
+        * If you already completed the steps installing git for your device, uncheck the "Git for Windows" option in the installer.
         
 #### If you installed "Docker Desktop"
 - [ ] Once you've loaded Docker open a terminal window (refer to the [section above](#securing-your-github-account) for terminal instructions).
