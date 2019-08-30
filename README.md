@@ -207,7 +207,7 @@ This message shows that your installation appears to be working correctly.
 
 ### Atom
 
-- [ ] Visit [https://atom.io](atom.io) to download the installer for your operating system.
+- [ ] Visit [https://atom.io](https://atom.io) to download the installer for your operating system.
 
 ## Submitting this assignment
 
